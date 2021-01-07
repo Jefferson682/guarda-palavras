@@ -1,0 +1,3 @@
+<?php
+
+echo "ESSA É A PÁGINA RESTRITA DA APLICAÇÃO";
