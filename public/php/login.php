@@ -1,5 +1,6 @@
 <?php
-include('conexao.php');
+require('config.php');
+require('functions.php');
 
 #verificação se veio dado via POST;
 if(empty($_POST['user']) || empty($_POST['pass'])) {
@@ -7,19 +8,14 @@ if(empty($_POST['user']) || empty($_POST['pass'])) {
     exit();
 }
 
-#proteção contra SQLinjection;
-$user = mysqli_real_escape_string($conexao, $_POST['user']);
-$pass = mysqli_real_escape_string($conexao, $_POST['pass']);
+    # Proteção contra SQLinjection;
+    $user = $_POST['user'];
+    $pass = md5($_POST['pass']);
 
-$query = "select * from `user` where nome='$user' and senha='$pass'";
+# Abre e fecha conexão com o BD;
+$conexao = DB_Conn();
+    # Aqui comandos com o banco.
+    $result = DB_aut($user, $pass);
 
-$result = mysqli_query($conexao, $query);
-$row = mysqli_num_rows($result);
-
-if($row == 1):
-    header('Location: painel.php');
-    exit()
-else:
-    header('Location: ../index.php');
-    exit()
-endif;
+    
+    var_dump($result);
