@@ -6,18 +6,90 @@
 
 body {
     background-color: blueviolet;
+    font-family: 'Roboto', sans-serif;
 }
 
 .container {
     background-color: white;
-    margin: 10rem auto;
-    height: 500px;
-    width: 500px;
+    width: 30rem;
+    height: 30rem;
     border-radius: 5px;
-    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    padding: 3rem;
+}
+
+.conteudo {
+    width: 25rem;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+
+.titulo {
+    font-weight: 900;
+    color: #430080;
+    margin-bottom: 3rem;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+}
+
+.form label p {
+    text-transform: lowercase;
+    margin-top: 1.5rem;
+    text-align: left;
+    margin-left: 1.5rem;
+}
+
+.form-item {
+    width: 90%;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid rgb(184, 184, 184);
+    height: 2.5rem;
+    padding: 0.5rem;
+}
+
+.form-item:focus{
+    box-shadw: 0px 0px 5px rgba(137, 43, 226, 0.555); 
+    border: 1px solid #430080;
+}
+
+.btn {
+    padding: 00.5rem;
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid #430080;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.btn:hover {
+    background-color: #430080;
+}
+
+.btn-sec {
+    background-color: #007e39;
+    border: 1px solid #005828;
+}
+
+.btn-sec:hover {
+    background-color: #005828;
+}
+
+/* Não conseguir selecionar o primeiro button dessa forma */
+/* form button:first-child {
+    margin-top: 2rem;
+} */
+
+.margin-top-2rem {
+    margin-top: 2rem;
 }

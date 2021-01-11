@@ -1,3 +1,14 @@
 <?php
+session_start();
 
-echo "ESSA É A PÁGINA RESTRITA DA APLICAÇÃO";
+if($_SESSION["logado"]):
+    echo "ESSA É A PÁGINA RESTRITA DA APLICAÇÃO";
+    
+    # LINK EM HTML
+    ?>
+    <a href="destroy.php">sair</a>
+    <?php
+
+    else:
+        header('Location: ../index.php');
+    endif;
