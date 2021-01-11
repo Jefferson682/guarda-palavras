@@ -14,17 +14,9 @@ session_start();
 <body>
 <section class="container">
     <div class="conteudo">
-        <h1 class="titulo">LOGIN</h1>
-        <form class="form" action="./php/aut.php" method="post">
-            <label for="user"><p>Usuário</p>
-            <input class="form-item" type="text" name="user" id="user" required>
-            </label>
-            <label for="pass"><p>Senha</p>
-            <input class="form-item" type="password" name="pass" id="pass" required>
-            </label>
-            <button class="btn form-item margin-top-2rem" type="submit" name="btn-entrar">ENTRAR</button>
-        </form>
+        <h1 class="titulo">USUÁRIO CADASTRADO COM SUCESSO!</h1>
             <a href="cad.php"><button class="btn btn-sec form-item" >CADASTRAR NOVO USUÁRIO</button></a>
+            <a href="index.php"><button class="btn form-item" >FAZER LOGIN</button></a>
     </div>
 </section>
 </body>
